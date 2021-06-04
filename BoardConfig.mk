@@ -23,7 +23,7 @@ TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_alioth
 TARGET_RECOVERY_DEVICE_MODULES := libinit_alioth
 
 # Kernel
-TARGET_KERNEL_SOURCE := kernel/xiaomi/alioth
+TARGET_KERNEL_SOURCE := kernel/xiaomi/sm8250
 TARGET_KERNEL_CONFIG := vendor/alioth_defconfig
 
 
