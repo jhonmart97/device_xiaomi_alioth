@@ -55,10 +55,6 @@ char const *heapminfree;
 char const *heapmaxfree;
 char const *heaptargetutilization;
 bool changed = false;
-char const *ro_build_fingerprint = "google/redfin/redfin:11/RQ2A.210505.003/7255357:user/release-keys"; 
-char const *ro_build_description = "redfin-user 11 RQ2A.210505.003 7255357 release-keys"; 
-char const *ro_stock_fingerprint = "POCO/alioth_global/alioth:11/RKQ1.200826.002/V12.0.2.0.RKHMIXM:user/release-keys";
-char const *ro_stock_description = "alioth-user 11 RKQ1.200826.002 V12.0.2.0.RKHMIXM release-keys"; 
 
 void check_device()
 {
@@ -93,28 +89,6 @@ void property_override(char const prop[], char const value[], bool add = true)
         __system_property_add(prop, strlen(prop), value, strlen(value));
 }
 
-void load_fprop_redfin() {
-    property_override("ro.build.description", ro_build_description);
-    property_override("ro.build.fingerprint", ro_build_fingerprint);
-    property_override("ro.bootimage.build.fingerprint", ro_build_fingerprint);
-    property_override("ro.system.build.fingerprint", ro_build_fingerprint);
-    property_override("ro.vendor.build.fingerprint", ro_build_fingerprint);
-    property_override("ro.product.build.fingerprint", ro_build_fingerprint);
-    property_override("ro.odm.build.fingerprint", ro_build_fingerprint);
-    property_override("ro.system_ext.build.fingerprint", ro_build_fingerprint);
-}
-
-void load_fprop_stock_alioth() {
-    property_override("ro.build.description", ro_stock_description);
-    property_override("ro.build.fingerprint", ro_stock_fingerprint);
-    property_override("ro.bootimage.build.fingerprint", ro_stock_fingerprint);
-    property_override("ro.system.build.fingerprint", ro_stock_fingerprint);
-    property_override("ro.vendor.build.fingerprint", ro_stock_fingerprint);
-    property_override("ro.product.build.fingerprint", ro_stock_fingerprint);
-    property_override("ro.odm.build.fingerprint", ro_stock_fingerprint);
-    property_override("ro.system_ext.build.fingerprint", ro_stock_fingerprint);
-}
-
 void load_redmi_k40() {
     property_override("ro.product.model", "M2012K11AC");
     property_override("ro.product.brand", "Redmi");
@@ -127,7 +101,6 @@ void load_redmi_k40() {
     property_override("ro.product.vendor.manufacturer", "Xiaomi");
     property_override("ro.product.vendor.brand", "Redmi");
     property_override("ro.product.vendor.model", "M2012K11AC");
-    load_fprop_redfin();
 }
 void load_poco_f3() {
     property_override("ro.product.model", "M2012K11AG");
@@ -141,7 +114,6 @@ void load_poco_f3() {
     property_override("ro.product.vendor.manufacturer", "Xiaomi");
     property_override("ro.product.vendor.brand", "POCO");
     property_override("ro.product.vendor.model", "M2012K11AG");
-    load_fprop_redfin();
 }
 void load_mi11x() {
     property_override("ro.product.model", "M2012K11AI");
@@ -155,7 +127,6 @@ void load_mi11x() {
     property_override("ro.product.vendor.manufacturer", "Xiaomi");
     property_override("ro.product.vendor.brand", "Mi");
     property_override("ro.product.vendor.model", "M2012K11AI");
-    load_fprop_redfin();
 }
 
 void load_snet() {
