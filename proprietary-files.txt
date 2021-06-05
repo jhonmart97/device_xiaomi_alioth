@@ -673,26 +673,26 @@ vendor/firmware/ipa_uc.b02
 vendor/firmware/ipa_uc.elf
 vendor/firmware/ipa_uc.mdt
 
-# Postprocessing
-vendor/bin/ppd
-vendor/bin/hw/vendor.display.color@1.0-service
-vendor/etc/init/vendor.display.color@1.0-service.rc
-vendor/lib/libdisp-aba.so
-vendor/lib/vendor.display.color@1.0.so
-vendor/lib/vendor.display.color@1.1.so
-vendor/lib/vendor.display.color@1.2.so
-vendor/lib/vendor.display.color@1.3.so
-vendor/lib/vendor.display.color@1.4.so
-vendor/lib/vendor.display.color@1.5.so
-vendor/lib/vendor.display.postproc@1.0.so
-vendor/lib64/libdisp-aba.so
-vendor/lib64/vendor.display.color@1.0.so
-vendor/lib64/vendor.display.color@1.1.so
-vendor/lib64/vendor.display.color@1.2.so
-vendor/lib64/vendor.display.color@1.3.so
-vendor/lib64/vendor.display.color@1.4.so
-vendor/lib64/vendor.display.color@1.5.so
-vendor/lib64/vendor.display.postproc@1.0.so
+# Postprocessing - from LA.UM.9.12.r1-09000-SMxx50.0
+vendor/bin/ppd|36bc56b7b205688770395f1796c7997b3c8361a0
+vendor/bin/hw/vendor.display.color@1.0-service|b1efa7d0bad20f36d9db9e44990a02b2a08b0908
+vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
+vendor/lib/libdisp-aba.so|88c722fc6d5353f2871a87e9f9fd279712866aa9
+vendor/lib/vendor.display.color@1.0.so|6e0084ed87f9efa824460c31d08b240574fabab1
+vendor/lib/vendor.display.color@1.1.so|181f218f7d8617db3e41a79cd97fc4c805dee152
+vendor/lib/vendor.display.color@1.2.so|09e3923983262d9cb7f7095f5d053afb68f411ee
+vendor/lib/vendor.display.color@1.3.so|8c82838ef5c534de2efdaa8ebc0b6669d51507d3
+vendor/lib/vendor.display.color@1.4.so|ae1885501415465aae3fd3e7bb24f688b6bb1fff
+vendor/lib/vendor.display.color@1.5.so|4defa90f2582148910098b1e7b6ec5b5175446d8
+vendor/lib/vendor.display.postproc@1.0.so|585174c09d75c825c2c9b847ef7cd635072826da
+vendor/lib64/libdisp-aba.so|38feb7a9ece2aa47ef5ca9640c29fbcde1ee1cd1
+vendor/lib64/vendor.display.color@1.0.so|7b403573cb75dbb16513b922f1a9e61a010d389c
+vendor/lib64/vendor.display.color@1.1.so|ad8ddd287434511befa74e4cea34ee71620608a4
+vendor/lib64/vendor.display.color@1.2.so|a08800f1ba23272fc6280a670d5cdba0c0c15039
+vendor/lib64/vendor.display.color@1.3.so|43d1be009f8cb5d6dcc44609044a9344a1074ec1
+vendor/lib64/vendor.display.color@1.4.so|f787c129360f55980f1a76b41b79c98f43749133
+vendor/lib64/vendor.display.color@1.5.so|9801106444c442170a508f70747a42a1a97ba6a6
+vendor/lib64/vendor.display.postproc@1.0.so|92e9c77d1dc5afeb050048a46eb9478aab80184c
 
 # Sensor-calibrate
 -system_ext/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar
