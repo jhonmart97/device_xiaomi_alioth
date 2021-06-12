@@ -341,15 +341,6 @@
          black in software (to avoid aliasing or emulate a cutout that is not physically existent).
      -->    
     <string name="config_mainBuiltInDisplayCutout">M 0,0 H -23 V 80 H 23 V 0 H 0 Z</string>
-     
-    <!-- Height of the status bar in portrait -->
-    <dimen name="status_bar_height_portrait">104px</dimen>
-
-    <!-- Height of the status bar in landscape -->
-    <dimen name="status_bar_height_landscape">74px</dimen>
-
-    <!-- Default radius of the software rounded corners. -->
-    <dimen name="rounded_corner_radius">106px</dimen>
     
     
 </resources>
