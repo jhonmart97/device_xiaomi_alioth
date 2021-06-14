@@ -22,7 +22,37 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
-#define BTM_DEF_LOCAL_NAME "Poco F3"
+#include <cutils/properties.h>
+#include <string.h>
+
+#include "osi/include/osi.h"
+
+typedef struct {
+    const char *product_vendor_marketname;
+    const char *product_model;
+} device_t;
+
+static const device_t devices[] = {
+};
+
+static inline const char *BtmGetDefaultName()
+{
+    char product_vendor_marketname[PROPERTY_VALUE_MAX];
+    property_get("ro.product.vendor.marketname", product_vendor_marketname, "");
+
+    for (unsigned int i = 0; i < ARRAY_SIZE(devices); i++) {
+        device_t device = devices[i];
+
+        if (strcmp(device.product_vendor_marketname, product_vendor_marketname) == 0) {
+            return device.product_model;
+        }
+    }
+
+    // Fallback to ro.product.model
+    return "";
+}
+
+#define BTM_DEF_LOCAL_NAME BtmGetDefaultName()
 // Disables read remote device feature
 #define MAX_ACL_CONNECTIONS   16
 #define MAX_L2CAP_CHANNELS    32
